@@ -8,18 +8,18 @@ Using real global population data provided by <https://datahub.io/core/populatio
 
 ### Install packages
 
-Before you begin, you will need to install the following packages:
+If you haven't already, you will need to install the following packages:
 
-* pygal - `pip install pygal`
-* pygal world map - `pip install pygal_maps_world`
-* json - `pip install json`
-* lxml - `pip install lxml`
+* pygal - `pip3 install pygal`
+* pygal world map - `pip3 install pygal_maps_world`
+* json - `pip3 install json`
+* lxml - `pip3 install lxml`
 
 ### Import packages
 
 1.  Create a folder called `world-pop-project`
 2.  Create 2 files called `main.py` and `data.json`
-3.  Inside of `main.py` import your packages:
+3.  At the very top of `main.py` import your packages:
 
 ```
 import json
@@ -49,6 +49,8 @@ with open(filename) as dataset:
 
 * Note: Be careful with indentation. Python is very sensitive about indentation.
 
+Example structure:
+
 ```
 def get_country_code(???):
   for ???, ??? in ???.items():
@@ -66,7 +68,8 @@ def get_country_code(???):
     * variable called `population` and set it's value to `pop_dict['Value']`
     * variable called `code` and set it's value to the `get_country_code` function you created earlier and give it the argument `country_name`
 4.  Inside of your loop create an `if` statement that checks if `code` exists. If it exists assign `cc_population[code]` to `population`
-    Example structure:
+
+Example structure:
 
 ```
 ??? = {}
